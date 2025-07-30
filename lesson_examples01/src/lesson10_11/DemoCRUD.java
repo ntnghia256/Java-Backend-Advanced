@@ -1,4 +1,4 @@
-package lesson10;
+package lesson10_11;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -51,14 +51,7 @@ public class DemoCRUD {
 //	}
 
 	public static void createUser(String username, String email) throws ClassNotFoundException, SQLException {
-		String url = "jdbc:mysql://localhost:3306/user_management_java_exercise_vti?autoReconnect=true&useSSL=false&characterEncoding=latin1";
-
-		String user = "root";
-		String password = "root";
-
-		Class.forName("com.mysql.cj.jdbc.Driver");
-
-		Connection conn = DriverManager.getConnection(url, user, password);
+		Connection conn = JDBCUtils.getConnection();
 
 		String sql = "INSERT INTO user (username, email) VALUES (?, ?)";
 		PreparedStatement preparedStatement = conn.prepareStatement(sql);
