@@ -1,2 +1,2 @@
-# Java_Backend_DevOps
-The course of VTI Academy
+# Java-Backend-Advanced
+The courses from VTI Academy
